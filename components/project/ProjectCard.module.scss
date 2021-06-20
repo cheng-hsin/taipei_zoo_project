@@ -1,0 +1,122 @@
+/*   color variables */
+$clr-primary: #3e4e81;
+$clr-primary-hover: #b1bfeb;
+$clr-primary-dark: #333e62;
+$clr-gray100: #f9fbff;
+$clr-gray150: #f4f6fb;
+$clr-gray200: #eef1f6;
+$clr-gray300: #d1d1d1;
+$clr-gray400: #909090;
+$clr-gray500: #5a5a5a;
+$clr-gray600: #3a3a3a;
+$clr-gray700: #242424;
+$anpanman-red: #fa6161;
+$anpanman-yellow: #fcf6cd;
+$anpanman-orange: #faab5d;
+$anpanman-blue: #00b3ec;
+
+/*   border radius */
+$radius: 0.2rem;
+
+/* max-width */
+$max-width: 100rem;
+
+/* animation-curve */
+$animation-curve: cubic-bezier(0.28, 1.9, 0.77, 0.72);
+.card {
+  margin: 30px 0.5rem;
+  width: 350px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    img {
+      width: inherit;
+      height: inherit;
+      border-radius: 40px;
+      object-fit: cover;
+    }
+
+    &:hover div,
+    &:focus div {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &popup {
+      position: absolute;
+      top: 0rem;
+      // left: -27rem;
+      // box-shadow: 0 0 10px $clr-gray300;
+      // background-color: $anpanman-orange;
+      // border-radius: $radius;
+      width: 100%;
+      height: 100%;
+      // padding: 1rem;
+      // display: flex;
+      // flex-direction: row;
+      // gap: 0.5rem;
+      // 隱藏下拉式選單
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 300ms $animation-curve;
+
+      img {
+        list-style: none;
+        // padding: 0.5rem 1rem;
+        border-radius: $radius;
+        transition: background-color 300ms $animation-curve;
+        font-weight: 600;
+        background-color: white;
+        color: $anpanman-orange;
+
+        &:hover,
+        &:focus {
+          color: #ffc891;
+        }
+        &:active {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  &:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  }
+  &.large {
+    width: 550px;
+  }
+}
+
+.title_white {
+  color: white;
+}
+.title_black {
+  color: black;
+}
+@media all and (max-width: 500px) {
+  .card_list {
+    flex-direction: column;
+  }
+}
+
+//modal start
+
+//modal end

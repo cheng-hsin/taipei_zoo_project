@@ -1,5 +1,5 @@
-import Layout from '../components/layout/Layout';
-import ProjectContainer from '../components/project/ProjectContainer';
+import Layout from '../../components/layout/Layout';
+import ProjectContainer from '../../components/project/ProjectContainer';
 
 export async function getServerSideProps() {
   const response = await fetch(
