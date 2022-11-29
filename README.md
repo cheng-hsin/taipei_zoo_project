@@ -1,5 +1,5 @@
 > Successfully deployed to the following URLs:
-taipei-zoo-project.vercel.app
+>> taipei-zoo-project.vercel.app
 taipei-zoo-project-cheng-hsin.vercel.app
 taipei-zoo-project-git-main-cheng-hsin.vercel.app
 
